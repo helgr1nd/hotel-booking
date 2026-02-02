@@ -21,4 +21,4 @@ RUN poetry config virtualenvs.create false \
 COPY . .
 
 # Run migrations and start server
-CMD ["sh", "-c", "python manage.py migrate && python manage.py runserver 0.0.0.0:9000"]
+CMD ["sh", "-c", "python manage.py migrate && gunicorn config.wsgi:application --bind 0.0.0.0:9000 --workers 4"]
