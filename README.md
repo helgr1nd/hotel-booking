@@ -23,7 +23,7 @@ docker-compose up --build
 
 ```bash
 # Создать
-curl -X POST http://localhost:9000/rooms/create \
+curl -X POST http://localhost:9000/roo[apps.py](hotel/apps.py)ms/create \
   -H "Content-Type: application/json" \
   -d '{"description": "Deluxe Room", "price": 5000}'
 
